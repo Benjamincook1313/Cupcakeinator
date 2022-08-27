@@ -1,11 +1,17 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import Cupcakes.Chocolate;
+import Cupcakes.Cupcake;
+import Cupcakes.RedVelvet;
+import Drinks.Drinks;
+import Drinks.Milk;
+import Drinks.Soda;
 
 public class Main {
   public static void main(String[] args){
     Scanner input = new Scanner(System.in);
 
-    ArrayList<Cupcake> cupCakeMenu = new ArrayList<Cupcake>();
+    ArrayList<Cupcake> cupcakeMenu = new ArrayList<Cupcake>();
     ArrayList<Drinks> drinkMenu = new ArrayList<Drinks>();
 
     Cupcake cupcake = new Cupcake();
@@ -43,31 +49,31 @@ public class Main {
     price = Double.parseDouble(priceText);
     redVelvet.setPrice(price);
 
-    cupCakeMenu.add(cupcake);
-    cupCakeMenu.add(chocolate);
-    cupCakeMenu.add(redVelvet);
+    cupcakeMenu.add(cupcake);
+    cupcakeMenu.add(chocolate);
+    cupcakeMenu.add(redVelvet);
 
-    System.out.println("\nThe price of the Standard cupcake is now: $" + cupCakeMenu.get(0).getPrice());
-    System.out.println("The price of the Chocolate cupcake is now: $" + cupCakeMenu.get(1).getPrice());
-    System.out.println("The price of the Red Velvet cupcake is now: $" + cupCakeMenu.get(2).getPrice());
+//    System.out.println("\nThe price of the Standard cupcake is now: $" + cupCakeMenu.get(0).getPrice());
+//    System.out.println("The price of the Cupcakes.Chocolate cupcake is now: $" + cupCakeMenu.get(1).getPrice());
+//    System.out.println("The price of the Red Velvet cupcake is now: $" + cupCakeMenu.get(2).getPrice());
 
-    System.out.println("\nNow that we have the prices set for the cupcakes lets move onto the drinks.");
+    System.out.println("\nNow that we have the prices set for the cupcakes lets move onto the drinks.\n");
     water.type();
-    System.out.println("How much would you like to charge for our standard drink? " +
+    System.out.println("\nHow much would you like to charge for our standard drink? " +
         "(Input a numerical number taken to 2 decimal places)");
     priceText = input.nextLine();
     price = Double.parseDouble(priceText);
     water.setPrice(price);
 
     soda.type();
-    System.out.println("How much would you like to charge for Soda? " +
+    System.out.println("\nHow much would you like to charge for Soda? " +
         "(Input a numerical number taken to 2 decimal places)");
     priceText = input.nextLine();
     price = Double.parseDouble(priceText);
     soda.setPrice(price);
 
     milk.type();
-    System.out.println("How much would you like to charge for Milk? " +
+    System.out.println("\nHow much would you like to charge for Milk? " +
         "(Input a numerical number taken to 2 decimal places)");
     priceText = input.nextLine();
     price = Double.parseDouble(priceText);
@@ -77,9 +83,11 @@ public class Main {
     drinkMenu.add(soda);
     drinkMenu.add(milk);
 
-    System.out.println("\nThe price of Water is now: $" + drinkMenu.get(0).getPrice());
-    System.out.println("The price of the Soda is now: $" + drinkMenu.get(1).getPrice());
-    System.out.println("The price of the Milk is now: $" + drinkMenu.get(2).getPrice());
+//    System.out.println("\nThe price of Water is now: $" + drinkMenu.get(0).getPrice());
+//    System.out.println("The price of the Drinks.Drinks.Soda is now: $" + drinkMenu.get(1).getPrice());
+//    System.out.println("The price of the Drinks.Drinks.Milk is now: $" + drinkMenu.get(2).getPrice());
+
+    new Orders(cupcakeMenu, drinkMenu);
 
   }
 }

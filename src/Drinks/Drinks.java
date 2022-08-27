@@ -1,8 +1,10 @@
+package Drinks;
+
 public class Drinks {
   private double price;
 
   public void type(){
-    System.out.println("The Standard drink is Water!");
+    System.out.print("The Water is the best drink ");
   }
 
   public double getPrice() {
@@ -12,4 +14,5 @@ public class Drinks {
   public void setPrice(double price) {
     this.price = price;
   }
+
 }
