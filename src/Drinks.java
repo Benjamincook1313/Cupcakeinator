@@ -1,5 +1,9 @@
-public class Cupcake {
+public class Drinks {
   private double price;
+
+  public void type(){
+    System.out.println("The Standard drink is Water!");
+  }
 
   public double getPrice() {
     return this.price;
@@ -8,10 +12,4 @@ public class Cupcake {
   public void setPrice(double price) {
     this.price = price;
   }
-
-  public void type() {
-    System.out.println("A basic, generic cupcake, with vanilla frosting");
-  }
-
-
 }
